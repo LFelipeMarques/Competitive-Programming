@@ -1,10 +1,10 @@
 #include <iostream>
 #define MAXN 10000010 /*Tamanho máximo do vetor*/
 using namespace std;
-int vetor[MAXN], tam; /*Declaração do vetor e do seu tamanho*/
+int vetor[MAXN], n; /*Declaração do vetor e do seu tamanho*/
 /*Algoritmo da Busca Binária*/
 int bb(int valor){
-    int hi=tam-1;
+    int hi=n-1;
     int lo=0;
     int mid;
     while(hi>=lo){
@@ -17,11 +17,11 @@ int bb(int valor){
 }
 int main(){
     /*Etapa de inicialização*/
-    int valor_buscado;
-    cin>>tam;
-    for(int i=0;i<tam;i++) cin>>vetor[i];
-    cin>>valor_buscado;
+    int x;
+    cin>>n;
+    for(int i=0;i<n;i++) cin>>vetor[i];
+    cin>>x;
     /*Fim da inicialização*/
-    cout<<bb(valor_buscado)<<"\n";
+    cout<<bb(x)<<"\n";
     return 0;
 }
